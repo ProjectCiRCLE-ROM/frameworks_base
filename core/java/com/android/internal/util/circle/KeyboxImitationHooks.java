@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2024 Paranoid Android
  * SPDX-FileCopyrightText: 2025 Neoteric OS
- * SPDX-FileCopyrightText: 2024-2025 The Clover Project
+ * SPDX-FileCopyrightText: 2024-2025 The CiRCLE Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package com.android.internal.util.circle;
