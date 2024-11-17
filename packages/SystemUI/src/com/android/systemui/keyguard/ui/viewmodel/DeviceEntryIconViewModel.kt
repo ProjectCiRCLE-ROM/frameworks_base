@@ -130,10 +130,17 @@ constructor(
         }
 
     val deviceEntryViewAlpha: Flow<Float> =
-        combine(transitionAlpha, alphaMultiplierFromShadeExpansion) { alpha, alphaMultiplier ->
-                alpha * alphaMultiplier
+        deviceEntryUdfpsInteractor.isUdfpsEnrolledAndEnabled
+            .flatMapLatest { udfpsEnrolled ->
+                if (udfpsEnrolled) {
+                    combine(transitionAlpha, alphaMultiplierFromShadeExpansion) { alpha, alphaMultiplier ->
+                            alpha * alphaMultiplier
+                        }
+                        .stateIn(scope = scope, started = SharingStarted.WhileSubscribed(), initialValue = 0f)
+                } else {
+                    flowOf(0f)
+                }
             }
-            .stateIn(scope = scope, started = SharingStarted.WhileSubscribed(), initialValue = 0f)
 
     private fun initialAlphaFromKeyguardState(keyguardState: KeyguardState): Float {
         return when (keyguardState) {
