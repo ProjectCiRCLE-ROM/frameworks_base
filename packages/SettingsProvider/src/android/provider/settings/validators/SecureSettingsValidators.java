@@ -523,5 +523,6 @@ public class SecureSettingsValidators {
                 new InclusiveIntegerRangeValidator(0, 1));
         VALIDATORS.put(Secure.PIF_DATA, ANY_STRING_VALIDATOR);
         VALIDATORS.put(Secure.FETCHED_PIF, ANY_STRING_VALIDATOR);
+	VALIDATORS.put(Secure.KEYBOX_DATA, ANY_STRING_VALIDATOR);
     }
 }
