@@ -702,8 +702,6 @@ public class FaceService extends SystemService {
                             faceSensorConfigurations);
             providers.add(mFaceProviderFunction.getFaceProvider(filteredSensorProps,
                     faceSensorConfigurations.getResetLockoutRequiresChallenge()));
-            */
-            providers.addAll(getSenseProviders());
             return providers;
         }
 
