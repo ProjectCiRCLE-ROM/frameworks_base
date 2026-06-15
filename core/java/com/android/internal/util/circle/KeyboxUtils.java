@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2024-2025 The Clover Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package com.android.internal.util.halcyon;
+package com.android.internal.util.circle;
 
 import android.security.keystore.KeyProperties;
 import android.system.keystore2.KeyEntryResponse;

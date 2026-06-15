@@ -1,4 +1,4 @@
-package com.android.server.halcyon;
+package com.android.server.circle;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -10,7 +10,7 @@ import android.provider.Settings;
 import android.util.Log;
 
 import com.android.server.SystemService;
-import com.android.internal.util.halcyon.PackageManagerUtils;
+import com.android.internal.util.circle.PackageManagerUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

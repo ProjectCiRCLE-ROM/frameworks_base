@@ -35,8 +35,8 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.R;
-import com.android.internal.util.halcyon.KeyProviderManager;
-import com.android.internal.util.halcyon.UserSelectedSpoofUtils;
+import com.android.internal.util.circle.KeyProviderManager;
+import com.android.internal.util.circle.UserSelectedSpoofUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 

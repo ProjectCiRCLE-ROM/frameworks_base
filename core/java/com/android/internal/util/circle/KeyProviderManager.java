@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2024 Paranoid Android
  * SPDX-License-Identifier: Apache-2.0
  */
-package com.android.internal.util.halcyon;
+package com.android.internal.util.circle;
 
 import android.app.ActivityThread;
 import android.content.Context;

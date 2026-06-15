@@ -4,7 +4,7 @@
  * SPDX-FileCopyrightText: 2024-2025 The Clover Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package com.android.internal.util.halcyon;
+package com.android.internal.util.circle;
 
 import android.hardware.security.keymint.Algorithm;
 import android.hardware.security.keymint.KeyParameter;
@@ -18,7 +18,7 @@ import android.system.keystore2.KeyEntryResponse;
 import android.system.keystore2.KeyMetadata;
 import android.util.Log;
 
-import com.android.internal.util.halcyon.KeyboxChainGenerator.KeyGenParameters;
+import com.android.internal.util.circle.KeyboxChainGenerator.KeyGenParameters;
 
 import java.security.cert.Certificate;
 import java.util.ArrayList;

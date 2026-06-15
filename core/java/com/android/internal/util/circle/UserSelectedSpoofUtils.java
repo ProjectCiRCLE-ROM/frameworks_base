@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.internal.util.halcyon;
+package com.android.internal.util.circle;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -36,7 +36,7 @@ import org.json.JSONObject;
 public class UserSelectedSpoofUtils {
 
     // Key in Settings.Secure to store user-selected apps
-    private static final String SPOOFED_APPS_KEY = "HALCYON_SPOOFED_APPS";
+    private static final String SPOOFED_APPS_KEY = "CIRCLE_SPOOFED_APPS";
 
     /**
      * Return true if this app should be spoofed dynamically by the user.
