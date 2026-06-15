@@ -10,7 +10,7 @@ import android.provider.Settings;
 import android.util.Log;
 
 import com.android.server.SystemService;
-import com.android.internal.util.circle.PackageManagerUtils;
+import org.lineageos.internal.util.PackageManagerUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
