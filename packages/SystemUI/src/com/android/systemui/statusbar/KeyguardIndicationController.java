@@ -116,7 +116,6 @@ import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.res.R;
 import com.android.systemui.securelockdevice.domain.interactor.SecureLockDeviceInteractor;
 import com.android.systemui.settings.UserTracker;
-import com.android.systemui.statusbar.phone.FaceUnlockImageView;
 import com.android.systemui.statusbar.phone.KeyguardBypassController;
 import com.android.systemui.statusbar.phone.KeyguardIndicationTextView;
 import com.android.systemui.statusbar.phone.StatusBarKeyguardViewManager;
@@ -175,7 +174,6 @@ public class KeyguardIndicationController {
     private final Lazy<SecureLockDeviceInteractor> mSecureLockDeviceInteractor;
 
     private ViewGroup mIndicationArea;
-    private FaceUnlockImageView mFaceIconView;
     private KeyguardIndicationTextView mTopIndicationView;
     private KeyguardIndicationTextView mLockScreenIndicationView;
     private final IBatteryStats mBatteryInfo;
@@ -436,13 +434,6 @@ public class KeyguardIndicationController {
         // Get new text color in case theme has changed
         if (Flags.indicationTextA11yFix()) {
             setIndicationColorToThemeColor();
-        }
-    }
-
-    public void setIndicationAreaTop(ViewGroup indicationAreaTop) {
-        mFaceIconView = indicationAreaTop.findViewById(R.id.face_unlock_icon);
-        if (mFaceIconView != null) {
-            mFaceIconView.updateColor();
         }
     }
 
@@ -1072,14 +1063,6 @@ public class KeyguardIndicationController {
             return;
         }
 
-        if (TextUtils.equals(biometricMessage, mContext.getString(R.string.keyguard_face_successful_unlock))) {
-            updateFaceIconViewState(FaceUnlockImageView.State.SUCCESS);
-        } else if (TextUtils.equals(biometricMessage, mContext.getString(R.string.keyguard_face_failed))) {
-            updateFaceIconViewState(FaceUnlockImageView.State.NOT_VERIFIED);
-        } else if (TextUtils.equals(biometricMessage, mContext.getString(R.string.face_unlock_recognizing))) {
-           updateFaceIconViewState(FaceUnlockImageView.State.SCANNING);
-        }
-
         if (mBiometricMessageSource != null && biometricSourceType == null) {
             // If there's a current biometric message showing and a non-biometric message
             // arrives, update the followup message with the non-biometric message.
@@ -1113,21 +1096,16 @@ public class KeyguardIndicationController {
     }
 
     private void showFaceUnlockRecognizingMessage() {
-        String faceUnlockMessage = mContext.getResources().getString(
-            R.string.face_unlock_recognizing);
-        showBiometricMessage(faceUnlockMessage, FACE);
+        showBiometricMessage(mContext.getResources().getString(
+                                    R.string.face_unlock_recognizing), FACE);
     }
 
     private void hideFaceUnlockRecognizingMessage() {
-        if (mFaceIconView != null) {
-            mFaceIconView.setVisibility(View.GONE);
-        }
         String faceUnlockMessage = mContext.getResources().getString(
             R.string.face_unlock_recognizing);
-        if (mBiometricMessage != null && mBiometricMessage.equals(faceUnlockMessage)) {
+        if (mBiometricMessage != null && mBiometricMessage == faceUnlockMessage) {
             mBiometricMessage = null;
             hideBiometricMessage();
-            updateFaceIconViewState(FaceUnlockImageView.State.HIDDEN);
         }
     }
 
@@ -1839,12 +1817,6 @@ public class KeyguardIndicationController {
             updateDeviceEntryIndication(false);
         }
     };
-
-    private void updateFaceIconViewState(FaceUnlockImageView.State state) {
-        if (mFaceIconView != null) {
-            mFaceIconView.setState(state);
-        }
-    }
 
     private final KeyguardStateController.Callback mKeyguardStateCallback =
             new KeyguardStateController.Callback() {
