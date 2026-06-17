@@ -26,8 +26,8 @@
     <string name="systemui_restart_message">Tüm değişikliklerin etkili olması için Sistem Arayüzünün yeniden başlatılması gerekiyor. Sistem Arayüzü şimdi yeniden başlatılsın mı?</string>
 
     <!-- Launcher Restart -->
-    <string name="launcher_restart_title">Launcher'ın yeniden başlatılması gerekiyor</string>
-    <string name="launcher_restart_message">Tüm değişikliklerin etkili olması için Launcher'ın yeniden başlatılması gerekiyor. Launcher şimdi yeniden başlatılsın mı?</string>
+    <string name="launcher_restart_title">Launcher\'ın yeniden başlatılması gerekiyor</string>
+    <string name="launcher_restart_message">Tüm değişikliklerin etkili olması için Launcher\'ın yeniden başlatılması gerekiyor. Launcher şimdi yeniden başlatılsın mı?</string>
 
     <!-- Pocket Lock -->
     <string name="pocket_lock_message_long_press">Kilidi açmak için güç tuşuna basılı tutun</string>
