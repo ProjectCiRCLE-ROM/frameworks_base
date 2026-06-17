@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2026 Project CiRCLE
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Settings Restart -->
+    <string name="settings_restart_title">Ayarların yeniden başlatılması gerekiyor</string>
+    <string name="settings_restart_message">Tüm değişikliklerin etkili olması için Ayarların yeniden başlatılması gerekiyor. Ayarlar şimdi yeniden başlatılsın mı?</string>
+
+    <!-- System Reboot -->
+    <string name="system_restart_title">Sistemin yeniden başlatılması gerekiyor</string>
+    <string name="system_restart_message">Tüm değişikliklerin etkili olması için sistemin yeniden başlatılması gerekiyor. Sistem şimdi yeniden başlatılsın mı?</string>
+
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_title">Sistem Arayüzünün (SystemUI) yeniden başlatılması gerekiyor</string>
+    <string name="systemui_restart_message">Tüm değişikliklerin etkili olması için Sistem Arayüzünün yeniden başlatılması gerekiyor. Sistem Arayüzü şimdi yeniden başlatılsın mı?</string>
+
+    <!-- Launcher Restart -->
+    <string name="launcher_restart_title">Launcher'ın yeniden başlatılması gerekiyor</string>
+    <string name="launcher_restart_message">Tüm değişikliklerin etkili olması için Launcher'ın yeniden başlatılması gerekiyor. Launcher şimdi yeniden başlatılsın mı?</string>
+
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Kilidi açmak için güç tuşuna basılı tutun</string>
+    <string name="pocket_view_title">Cep modu açık</string>
+    <string name="pocket_view_title_cancel">Telefonunuzu kullanmak için:</string>
+    <string name="pocket_view_top_tag_cancel">Telefonunuzun mavi alanında herhangi bir engel olup olmadığını kontrol edin ve varsa kiri veya tozu temizleyin.</string>
+    <string name="pocket_view_top_tag_cancel2">Cep modundan zorla çıkmak için güç tuşuna basılı tutun.</string>
+    <string name="pocket_view_top_tag_number1">1.\u0020</string>
+    <string name="pocket_view_top_tag_number2">2.\u0020</string>
+</resources>
