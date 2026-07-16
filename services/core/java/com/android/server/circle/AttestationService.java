@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public final class AttestationService extends SystemService {
 
     private static final String TAG = AttestationService.class.getSimpleName();
-    private static final String API = "https://raw.githubusercontent.com/thehalcyon/vendor_certification/refs/heads/main/gms_certified_props.json";
+    private static final String API = "https://raw.githubusercontent.com/UN1CA/static_resources/refs/heads/sixteen/pif/pif.json";
 
     private static final long INITIAL_DELAY = 0;
     private static final long INTERVAL = 5;
